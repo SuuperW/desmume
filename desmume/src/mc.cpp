@@ -1677,6 +1677,7 @@ bool BackupDevice::load_movie(EMUFILE &is)
 	is.read_32LE(info.mem_size);
 
 	is.fseek(0, SEEK_SET);
+	delete fpMC;
 	fpMC = &is;
 
 	state = RUNNING;
